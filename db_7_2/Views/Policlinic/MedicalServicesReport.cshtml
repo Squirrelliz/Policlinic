@@ -1,0 +1,67 @@
+﻿@model IEnumerable<db_7_2.Models.MedicalServiceReportDTO>
+
+@{
+    ViewData["Title"] = "Отчет по оказанным медицинским услугам";
+}
+
+<h1>Отчет по оказанным медицинским услугам</h1>
+
+<p>
+
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientFcs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateTime)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Specialization)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DoctorFcs)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.ServiceName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Result)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.PatientFcs)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.DateOfBirth)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.DateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Specialization)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.DoctorFcs)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

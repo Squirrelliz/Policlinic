@@ -1,0 +1,56 @@
+﻿@model IEnumerable<db_7_2.Models.Patient>
+
+@{
+    ViewData["Title"] = "Пациенты";
+}
+
+<h1>Пациенты</h1>
+
+<p>
+
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fcs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactDataId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ElectronicCardId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+              <td>
+                @Html.DisplayFor(model => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Fcs)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.ContactDataId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.ElectronicCardId)
+            </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

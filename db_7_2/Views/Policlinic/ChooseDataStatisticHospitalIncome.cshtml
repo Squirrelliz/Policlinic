@@ -1,0 +1,21 @@
+﻿@model IEnumerable<db_7_2.Models.HospitalIncomeStatisticsDTO>
+@{
+    ViewData["Title"] = "Статистика доходов больницы";
+}
+
+<h1>Статистика доходов больницы</h1>
+<form method="post" action="~/Policlinic/HospitalIncomeStatistics">
+
+    <div class="form-inline">
+
+        <input class="datefield" data-val="true" data-val-required="Date is required"
+               id="StartPeriodDate" name="StartPeriodDate" type="date" value="01/02/1999" />
+
+        <input class="datefield" data-val="true" data-val-required="Date is required"
+               id="EndPeriodDate" name="EndPeriodDate" type="date" value="01/02/1999" />
+
+        <input type="submit" value="Определить период" />
+    </div>
+</form>
+
+

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<db_7_2.Models.HospitalIncomeStatisticsDTO>
+
+@{
+    ViewData["Title"] = "Отчет по оказанным медицинским услугам";
+}
+
+<h1>Статистика заболеваний</h1>
+
+<p>
+
+
+</p>
+<label class="display-8">За период от:  @TempData["DateFrom"] до:  @TempData["DateTo"] </label>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicalServiceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Income)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.MedicalServiceName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Income)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
